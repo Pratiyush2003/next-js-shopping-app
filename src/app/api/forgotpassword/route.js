@@ -4,8 +4,6 @@ import User from "../model/User";
 import nodemailer from "nodemailer";
 import { NextRequest, NextResponse } from 'next/server';
 
-console.log("hello world this is component");
-
 export async function POST(request) {
   try {
     const { email } = await request.json();
