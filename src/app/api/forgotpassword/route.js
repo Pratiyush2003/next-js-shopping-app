@@ -33,7 +33,7 @@ export async function POST(request) {
       },
     });
 
-    const resetLink = `http://localhost:3000/uipages/reset-password?token=${resetToken}`;
+    const resetLink = `https://next-js-shopping-app-two.vercel.app/uipages/reset-password?token=${resetToken}`;
 
     await transporter.sendMail({
       from: "pratiyushs37@gmail.com",

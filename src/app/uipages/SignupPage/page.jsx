@@ -35,7 +35,6 @@ const SignupPage = () => {
                 localStorage.setItem("token", data.token);
                 router.push('/uipages/LoginPage');
             } else {
-                // Display error message from the server
                 setErrorMessage(data.message || 'Signup failed. Please try again.');
             }
         } catch (error) {
@@ -53,7 +52,7 @@ const SignupPage = () => {
                             Create your account
                         </h1>
                         <form className="space-y-4 md:space-y-6" onSubmit={handlesignup}>
-                            {/* Name Input */}
+                
                             <div>
                                 <label
                                     htmlFor="name"
@@ -73,7 +72,7 @@ const SignupPage = () => {
                                 />
                             </div>
 
-                            {/* Email Input */}
+                    
                             <div>
                                 <label
                                     htmlFor="email"
@@ -93,7 +92,7 @@ const SignupPage = () => {
                                 />
                             </div>
 
-                            {/* Password Input */}
+                         
                             <div>
                                 <label
                                     htmlFor="password"
@@ -113,14 +112,13 @@ const SignupPage = () => {
                                 />
                             </div>
 
-                            {/* Error Message */}
                             {errorMessage && (
                                 <div className="text-red-500 text-sm">
                                     {errorMessage}
                                 </div>
                             )}
 
-                            {/* Signup Button */}
+                         
                             <button
                                 type="submit"
                                 className="w-full text-white bg-black hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"

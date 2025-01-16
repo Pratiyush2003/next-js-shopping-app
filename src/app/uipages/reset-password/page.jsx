@@ -13,7 +13,6 @@ export default function ResetPassword() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Validate token and password before sending the request
         if (!token || !password) {
             setMessage('Missing token or password');
             return;
@@ -26,15 +25,12 @@ export default function ResetPassword() {
                 body: JSON.stringify({ token, password }),
             });
 
-            // Check if the response is ok
             if (!response.ok) {
                 throw new Error('Failed to reset password');
             }
 
-            // Try to parse the response as JSON
             const data = await response.json();
 
-            // Handle success or error based on the response data
             if (data.success) {
                 setMessage('Password reset successful');
                 router.push('/uipages/LoginPage');
@@ -42,7 +38,6 @@ export default function ResetPassword() {
                 setMessage(data.message || 'Error resetting password');
             }
         } catch (error) {
-            // Handle errors like network failure or invalid JSON
             setMessage(error.message || 'An error occurred');
         }
     };
