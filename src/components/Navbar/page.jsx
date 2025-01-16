@@ -25,7 +25,7 @@ const Navbar = () => {
         <>
             <div ref={navref} className="flex justify-between items-center w-full bg-black text-white px-4 md:px-14 h-20 rounded-lg">
                 <Link href="/" className="text-lg font-semibold">
-                    Next Js
+                    ShopWell
                 </Link>
                 <div>
                     <div

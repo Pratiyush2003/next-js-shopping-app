@@ -101,12 +101,12 @@ const LoginPage = () => {
                                             </label>
                                         </div>
                                     </div>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        href="/uipages/Forgetpassword"
                                         className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
                                     >
                                         Forgot password?
-                                    </a>
+                                    </Link>
                                 </div>
                                 <button
                                     type="submit"
