@@ -43,7 +43,7 @@ const Productcard = ({ product }) => {
                         ))
                     ) : (
                         <p className="text-gray-500 col-span-full text-center">
-                            No products available
+                            Loading...
                         </p>
                     )}
                 </div>

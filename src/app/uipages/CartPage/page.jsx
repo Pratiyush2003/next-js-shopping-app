@@ -29,7 +29,7 @@ const CartPage = () => {
     
             const data = await response.json();
             const result = await stripe.redirectToCheckout({ sessionId: data.id });
-            console.log(result);
+    
             if (result.error) {
                 console.log(result.error.message);
             }
@@ -59,7 +59,7 @@ const CartPage = () => {
             const data = await response.json();
             setCartItems(data);
         } catch (error) {
-            setError('Unable to fetch cart items.');
+            setError('Login to view cart');
         } finally {
             setLoading(false);
         }
@@ -97,7 +97,7 @@ const CartPage = () => {
     }
 
     if (error) {
-        return <p className="text-red-500 text-center mt-10">{error}</p>;
+        return <p className="text-red-500 text-center mt-10 my-24">{error}</p>;
     }
 
     if (cartItems.products.length === 0) {

@@ -29,8 +29,8 @@ export async function POST(req) {
       payment_method_types: ["card"],
       line_items,
       mode: "payment",
-      success_url: `${process.env.NEXT_PUBLIC_DOMAIN}/uipages/Success`,
-      cancel_url: `${process.env.NEXT_PUBLIC_DOMAIN}/uipages/Cancel`,
+      success_url: `https://next-js-shopping-9sgtdxatb-pratiyushs-projects.vercel.app/uipages/Success`,
+      cancel_url: `https://next-js-shopping-9sgtdxatb-pratiyushs-projects.vercel.app/uipages/Cancel`,
     });
 
     return NextResponse.json({ id: session.id });
